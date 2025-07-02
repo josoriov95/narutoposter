@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+main {
+    max-width: 1000px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.hero {
+    margin: 30px 0 50px;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 2fr 1fr;
+    height: 300px;
+}
+
+.hero-content h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: xx-large;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-family: "Noto Sans", sans-serif;
+    text-align: justify;
+}
+
+.hero-content a {
+    display: inline-block;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    padding: 8px 30px;
+    margin: 4px 0;
+    transition: background .2s ease-in;
+    border-radius: 20px;
+}
+
+.hero-content a:hover {
+    background-color: rgb(247, 144, 0);
+}
+
+.hero-img-container {
+    background: url(wind-effect.jpg) center / contain no-repeat;
+}
+
+.hero-img {
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.only-media {
+    display: none;
+}
+
+.villages-container {
+    margin-bottom: 50px;
+}
+
+.villages_title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.villages-content {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-template-rows: repeat(2, minmax(150px, 1fr));
+    justify-content: center;
+}
+
+.village_img.big {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.village_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 6px rgba(128, 128, 128, .7);
+}
+
+.kages_title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.kages {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    justify-content: center;
+    gap: 18px;
+}
+
+.kage_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media(max-width: 740px) {
+    .hero {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+        height: auto;
+    }
+
+    .hero-content h1 {
+        text-align: center;
+    }
+
+    .hero-img-container {
+        display: none;
+    }
+
+    .only-media {
+        display: block;
+    }
+
+    .villages-content {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .kages {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        grid-auto-flow: row;
+        grid-auto-rows: 150px;
+        justify-content: center;
+        gap: 18px;
+    }
+    .kage_img:nth-child(3){
+        grid-column: 1/-1 ;
+    }
+
+}
+@media(max-width: 470px){
+    .villages-content{
+        display: flex;
+        flex-direction: column;
+    }
+}
