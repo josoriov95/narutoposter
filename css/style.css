@@ -44,7 +44,7 @@ main {
 }
 
 .hero-img-container {
-    background: url(wind-effect.jpg) center / contain no-repeat;
+    background: url(../img/wind-effect.jpg) center / contain no-repeat;
 }
 
 .hero-img {
